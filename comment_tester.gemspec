@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'comment_tester'
-  s.version = "0.1.1"
+  s.version = "0.1.2"
   s.summary = "Write and run tests from your code comments"
   s.description = "#{s.summary}\n"
   s.author = "Michael H. Buselli"

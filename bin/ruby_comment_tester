@@ -142,4 +142,4 @@ class CommentTester
   end
 end
 
-CommentTester.run(ARGV) if __FILE__ == $0
+CommentTester.run(ARGV)
