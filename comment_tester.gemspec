@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'comment_tester'
-  s.version = "0.1.0"
+  s.version = "0.1.1"
   s.summary = "Write and run tests from your code comments"
   s.description = "#{s.summary}\n"
   s.author = "Michael H. Buselli"
@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.files = ["README", "LICENSE", "bin/ruby_comment_tester"]
   s.require_paths = ["lib"]
   s.bindir = "bin"
+  s.executables = ["ruby_comment_tester"]
   s.license = "BSD"
   s.rubyforge_project = "comment_tester"
   s.has_rdoc = false
