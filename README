@@ -1,0 +1,42 @@
+# Copyright (c) 2013, Michael H. Buselli
+# See LICENSE for details.  All other rights reserved.
+#
+# ruby_comment_tester works by auto-generating Ruby test-unit files from
+# the comments of a Ruby program.  The idea is that you mimic what you
+# would type into irb that could provide a test.  In doing so, you write
+# both a test and document the behavior of your program or method in the
+# same place.  Some example test comments are as follows:
+
+# Code and assertions in the same comment block are grouped into
+# a single test.
+#
+# irb> a = "123"
+# irb> b = a.split(/2/)
+# => ["1", "3"]
+#
+# irb> b.map(&:to_i).inject(0) { |s, x| s + x } + 38
+# => 42
+
+# Variables are not sticky between tests, and you can also test for
+# exceptions or thrown objects with raises=> and throws=>.
+#
+# irb> a
+# raises=> NameError
+# irb> throw :catch_me
+# throws=> :catch_me
+
+# Sometimes you have to initialize something for your code or tests to
+# work.  Use irb-setup> for that.
+#
+# irb-setup> puts "This runs outside the tests before code or tests are loaded."
+# irb> [:hello, :world].map { |s| s.to_s.capitalize }.join(" ")
+# => "Hello World"
+
+# You can comment out tests with double hashes of any sort.
+#
+# # irb> this won't run
+# # => foo
+## irb> neither does this
+## => bar
+
+# You can run the above tests by running this program on itself.
